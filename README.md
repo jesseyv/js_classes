@@ -1,4 +1,4 @@
 js_classes
 ==========
 
-Demonstration of JS inheritance
+Demonstration of JS inheritance. Contains unit tests and docs.
