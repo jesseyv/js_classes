@@ -9,7 +9,7 @@ var log = window.console.log.bind(window.console);
 (function(w) {
     'use strict';
 
-    // <a id="extend_opts"></a>`extend_opts()` creates options object
+    // `extend_opts()` creates options object
     //
     // Usage:
     //
@@ -32,8 +32,7 @@ var log = window.console.log.bind(window.console);
         return result;
     };
 
-
-    // <a id="extend"></a>`extend()` makes inheritance of objects
+    // `extend()` makes inheritance of objects
     //
     // Usage:
     //

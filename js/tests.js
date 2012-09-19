@@ -73,7 +73,6 @@ test('Class inheritance', function() {
     // Another child class
     function AnotherChildClass(options) {
         ChildClass.call(this, options);
-        log(this);
     }
     AnotherChildClass.prototype = {
         constructor: ChildClass,
@@ -85,7 +84,8 @@ test('Class inheritance', function() {
 
     // Tests
     var c2 = new AnotherChildClass({});
+    var inheritance_repr = c2.getReprString();
     
-    equal(c2.parmHandler(), '(undefined) [Base] => [Child]');
-    equal(c2.parmHandler('test'), '(test) [Base] => [Child]');
+    equal(c2.parmHandler(), '(undefined) ' + inheritance_repr);
+    equal(c2.parmHandler('test'), '(test) ' + inheritance_repr);
 });
