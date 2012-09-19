@@ -18,15 +18,17 @@ var log = window.console.log.bind(window.console);
     w.extend_opts = function(source, options) {
         var result = {};
 
-        if (typeof source !== undefined) {
-            for (var sKey in source) {
-                result[sKey] = source[sKey];
+        function append_opts(opts) {
+            for (var k in opts) {
+                result[k] = opts[k];
             }
         }
+
+        if (typeof source !== undefined) {
+            append_opts(source);
+        }
         if (typeof options !== undefined) {
-            for (var oKey in options) {
-                result[oKey] = options[oKey];
-            }
+            append_opts(options);
         }
 
         return result;
